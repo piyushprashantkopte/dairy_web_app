@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}
+home
+{% endblock title %}
+
+{% block banner %}
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/media/images/banner/b1.jpg" class="d-block w-100" alt="banner img">
+    </div>
+    <div class="carousel-item">
+      <img src="/media/images/banner/b2.jpg" class="d-block w-100" alt="banner img">
+    </div>
+    <div class="carousel-item">
+      <img src="/media/images/banner/b3.jpg" class="d-block w-100" alt="banner img">
+    </div>
+    <div class="carousel-item">
+      <img src="/media/images/banner/b4.jpg" class="d-block w-100" alt="banner img">
+    </div>
+   
+  </div>
+    
+  </div>
+
+{% endblock banner %}
+
+{% block information %}
+
+
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+      <h1>Products</h1>
+      <small class="fs-5">{% lorem 1 %}</small>
+    </div>
+</div>
+
+{% endblock information %}
+
+{% block content %}
+<div class="container">
+<h2 class="text-center">Dairy Products</h2>
+<br>
+<div class="row container">
+    <div class="col-sm-4">
+    <div class="card" style="width: 18rem;">
+        <img src="/media/images/buffalo-ghee.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Ghee</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="{% url 'category' 'GH' %}" class="btn btn-primary">Go ahead</a>
+        </div>
+      </div>
+      </a>
+    </div>
+
+      <div class="col-sm-4">
+      <div class="card" style="width: 18rem; ">
+        <img src="/media/images/curd-total.png" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Curd</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="{% url 'category' 'CR' %}" class="btn btn-primary">Go ahead</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">  
+     
+    <div class="card" style="width: 18rem;">
+        <img src="/media/images/kulfi.png" class="card-img-top" alt="" width="150" height="150">
+        <div class="card-body">
+          <h5 class="card-title">kulfi</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="{% url 'category' 'IC' %}" class="btn btn-primary">Go ahead</a>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+
+</div>
+
+<br><br>
+{% endblock content %}
